@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кофейня "Кофе и Уют"</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Плавающее меню */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+        
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            text-transform: uppercase;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+        }
+
+        .content {
+            margin-top: 70px;
+            padding: 20px;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        /* Стиль галереи */
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 300px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Форма обратной связи */
+        .contact-form {
+            margin-top: 40px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #575757;
+        }
+
+        /* Отзывы */
+        .reviews {
+            margin-top: 40px;
+        }
+
+        .review {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+
+        /* Меню кофейни */
+        .menu {
+            margin-top: 40px;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .menu li {
+            padding: 10px;
+            background-color: #f4f4f4;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .menu li strong {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Плавающее меню -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Логотип кофейни">
+        </div>
+        <a href="#about">О нас</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#menu">Меню</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contact">Контакты</a>
+    </div>
+
+    <!-- Контент -->
+    <div class="content">
+        <!-- О кофейне -->
+        <section id="about">
+            <h1>О кофейне</h1>
+            <p>Мы предлагаем вам уютную атмосферу, отличный кофе и лучшие десерты в городе. Наша кофейня — это место, где можно насладиться спокойной атмосферой, поработать или встретиться с друзьями. Приходите и убедитесь сами!</p>
+        </section>
+
+        <!-- Галерея -->
+        <section id="gallery">
+            <h2>Галерея</h2>
+            <div class="gallery">
+                <img src="./img/Без названия.jpg" alt="Фото 1">
+                <img src="./img/кофе 2.jpg" alt="Фото 2">
+                <img src="./img/Кофе с собой.jpg" alt="Фото 3">
+                <img src="./img/Круассан.jpg" alt="Фото 4">
+            </div>
+        </section>
+           <!-- Меню кофейни -->
+           <section id="menu">
+            <h2>Меню</h2>
+            <div class="menu">
+                <ul>
+                    <li><strong>Капучино</strong> - 250 руб.</li>
+                    <li><strong>Латте</strong> - 300 руб.</li>
+                    <li><strong>Эспрессо</strong> - 150 руб.</li>
+                    <li><strong>Американо</strong> - 200 руб.</li>
+                    <li><strong>Торт Наполеон</strong> - 150 руб.</li>
+                    <li><strong>Печенье с шоколадом</strong> - 80 руб.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Отзывы -->
+        <section id="reviews">
+            <h2>Отзывы</h2>
+            <div class="reviews">
+                <div class="review">
+                    <p><strong>Анна</strong>: Очень уютное место! Прекрасный кофе и замечательная атмосфера.</p>
+                </div>
+                <div class="review">
+                    <p><strong>Иван</strong>: Отличный выбор десертов! Обязательно вернусь.</p>
+                </div>
+                <div class="review">
+                    <p><strong>Мария</strong>: Здесь всегда приятно работать. Вкусный кофе и бесплатный Wi-Fi.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма обратной связи -->
+        <section id="contact">
+            <h2>Контакты</h2>
+            <div class="contact-form">
+                <form action="#">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="email" placeholder="Ваш email" required>
+                    <textarea placeholder="Ваше сообщение" rows="4" required></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- JS для галереи -->
+    <script>
+        const galleryImages = document.querySelectorAll('.gallery img');
+        let currentIndex = 0;
+
+        galleryImages.forEach((image, index) => {
+            image.addEventListener('click', () => {
+                currentIndex = index;
+                showImage(currentIndex);
+            });
+        });
+
+        function showImage(index) {
+            galleryImages.forEach((image, i) => {
+                if (i === index) {
+                    image.style.transform = 'scale(1.1)';
+                } else {
+                    image.style.transform = 'scale(1)';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

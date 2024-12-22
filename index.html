@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop "Brewed Bliss"</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Floating Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 15px 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #FFD700;
+        }
+
+        /* Header */
+        header {
+            background-image: url('https://via.placeholder.com/1920x600');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 100px 20px;
+            color: white;
+        }
+        header h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        header p {
+            font-size: 1.2em;
+            text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* About Section */
+        section#about {
+            padding: 60px 20px;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        section#about h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        section#about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        /* Gallery Section */
+        section#gallery {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+        section#gallery h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            overflow-x: scroll;
+            padding-bottom: 20px;
+        }
+        .gallery-container img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .gallery-container img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Reviews Section */
+        section#reviews {
+            padding: 60px 20px;
+            background-color: #f4f4f4;
+        }
+        section#reviews h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .reviews {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .review {
+            width: 250px;
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+        }
+        .review p {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .review h3 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            color: #8B4513;
+        }
+        .review span {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* Contact Section */
+        section#contact {
+            padding: 60px 20px;
+            background-color: #fff;
+        }
+        section#contact h2 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        form button {
+            background-color: #8B4513;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        form button:hover {
+            background-color: #FFD700;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Floating Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Coffee Shop "Brewed Bliss"</h1>
+        <p>Your daily dose of happiness in a cup</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Brewed Bliss, we bring the finest coffee from around the world to your cup. Whether you're after a classic espresso, a frothy cappuccino, or a smooth latte, we've got something to satisfy every coffee lover's craving. Our cozy ambiance and friendly service will make your visit feel like home.</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="./img/Без названия.jpg" alt="Espresso Coffee" onclick="changeImage('https://via.placeholder.com/300x200')">
+            <img src="./img/кофе 2.jpg" alt="Latte Art" onclick="changeImage('https://via.placeholder.com/300x200')">
+            <img src="./img/Кофе с собой.jpg" alt="Coffee Beans" onclick="changeImage('https://via.placeholder.com/300x200')">
+            <img src="./img/Круассан.jpg" alt="Coffee Shop Interior" onclick="changeImage('https://via.placeholder.com/300x200')">
+            <img src="./img/1674369445_balthazar-club-p-deserti-estetika-pinterest-5.png" alt="Coffee Shop Interior" onclick="changeImage('https://via.placeholder.com/300x200')">
+            <img src="./img/Coffee aesthetics.jpg" alt="Coffee Shop Interior" onclick="changeImage('https://via.placeholder.com/300x200')">
+            <img src="./img/Coffee Time ☕.jpg" alt="Coffee Shop Interior" onclick="changeImage('https://via.placeholder.com/300x200')">
+        
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="reviews">
+            <div class="review">
+                <p>"The best coffee I've ever had! The atmosphere is amazing and the staff is super friendly."</p>
+                <h3>Sarah J.</h3>
+                <span>⭐⭐⭐⭐⭐</span>
+            </div>
+            <div class="review">
+                <p>"I come here every morning before work. The lattes are always perfect!"</p>
+                <h3>John D.</h3>
+                <span>⭐⭐⭐⭐</span>
+            </div>
+            <div class="review">
+                <p>"A cozy spot with a fantastic selection of brews. Highly recommend the espresso!"</p>
+                <h3>Maria S.</h3>
+                <span>⭐⭐⭐⭐⭐</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Brewed Bliss Coffee Shop. All rights reserved.</p>
+        <p>Visit us at 123</p>
+    </footer>
+    
+</body>
+</html>
